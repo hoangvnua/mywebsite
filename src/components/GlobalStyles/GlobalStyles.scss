@@ -12,6 +12,17 @@
     --box-shadow: 5px 5px 15px #c1c8d3, -5px -5px 15px #fff;
 }
 
+::-webkit-scrollbar {
+    background-color: #f5f5f5;
+    width: 7px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+}
+
 body {
     background-color: #d4dce1 !important;
     font-family: "Poppins", sans-serif !important;
@@ -31,15 +42,14 @@ li {
     font-size: 35px;
     color: #11c37c;
 }
-@media (min-width: 992px) {
-    .ml {
-        margin-left: calc(50% / 2);
-    }
-}
 
 .dflex {
     display: flex;
     padding-left: 0;
+}
+
+.ml {
+    margin-left: calc(50% / 2);
 }
 
 #wrapper {
@@ -58,6 +68,7 @@ li {
 
 .banner .content-banner {
     text-align: justify;
+    // padding-top: 100px;
 }
 .banner .content-banner h1 {
     font-size: 4.5em;
@@ -100,7 +111,6 @@ li {
 .find {
     margin-top: 50px;
     display: flex;
-    // line-height: ;
 }
 
 .find h3 {
@@ -112,7 +122,11 @@ li {
     display: flex;
 }
 
-.find ul li {
+.find ul a {
+    color: #000;
+}
+
+.find ul a li {
     width: 50px;
     height: 50px;
     box-shadow: var(--box-shadow);
@@ -123,7 +137,7 @@ li {
     transition: 0.5s;
 }
 
-.find ul li:hover {
+.find ul a li:hover {
     color: #fff;
     background-image: var(--gradient);
 }
@@ -131,4 +145,287 @@ li {
 .banner .avatar img {
     width: 90%;
     border-radius: 30px;
+    height: calc(100vh - 130px);
+    box-shadow: 10px 15px 15px 12px gray;
+}
+
+.banner .avatar {
+    text-align: center;
+    position: relative;
+}
+
+//Product
+.shop {
+    margin-top: 7 0px;
+}
+.shop .new-product {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.shop .new-product .list-product .product {
+    height: 320px;
+}
+
+.shop .new-product .list-product .product .card-body {
+    padding: 0 10px;
+}
+
+.shop .new-product .list-product .product .card-body .sell {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.shop .new-product .list-product .product .card-body .card-title {
+    font-size: 1em;
+}
+
+.shop .new-product .list-product .product img {
+    height: 200px;
+}
+
+.shop .new-product .list-product {
+    display: flex;
+}
+
+.shop .new-product .btn-goshop {
+    margin-top: 20px;
+    width: 36%;
+    background-color: #6583de;
+    border: transparent 1px solid;
+    color: #000000;
+    border-radius: 22px;
+    position: absolute;
+    left: 32%;
+    padding: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.shop .new-product .btn-goshop:hover {
+    color: #fff;
+    background-image: var(--gradient);
+    border: #b978c5 1px solid;
+}
+
+.shop .new-product .list-product .product {
+    margin: 0 10px;
+}
+
+//proeject
+.project {
+    height: 100vh;
+}
+
+//blog
+.blog {
+    margin-top: 100px;
+    overflow-x: hidden;
+}
+
+.card-blog {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    position: relative;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+}
+
+/* style thanh cuộn*/
+.blog:hover ::-webkit-scrollbar {
+    background-color: #f5f5f5;
+}
+
+.blog:hover ::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+
+.blog ::-webkit-scrollbar {
+    background-color: transparent;
+    height: 3px;
+}
+
+.blog ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.card-blog .card {
+    width: 20em;
+    display: flex;
+    background-color: transparent;
+    border: none;
+}
+
+.card-blog .card a {
+    width: 100%;
+}
+
+.card-blog .card a img {
+    height: 180px;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.card-blog .card a:hover .icon {
+    opacity: 1;
+    transform: translate(-50%, -110%);
+}
+
+.card-blog .card a .icon {
+    line-height: 100%;
+    position: absolute;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    padding: 7px 10px;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+.card-blog .card .content h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//contact
+.contact {
+    margin-top: 100px;
+}
+.contact-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-card .card {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    width: 30%;
+    line-height: 70px;
+    margin: 0 20px;
+    box-shadow: none;
+}
+
+.contact-card .card:hover {
+    box-shadow: 5px 5px 10px gray, -5px -5px 10px gray;
+}
+
+.contact-card .card .icon {
+    margin-top: 10px;
+    font-size: 35px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #fbe7ff;
+    box-shadow: 2px 2px 10px gray, 0.5px 2px 10px gray;
+}
+
+.contact-card:nth-child(1) {
+    justify-content: start;
+}
+
+.contact-card:nth-child(2) {
+    justify-content: center;
+}
+
+.contact-card:nth-child(3) {
+    justify-content: end;
+}
+
+.contact-card .card .card-title {
+    border-bottom: #000 1px solid;
+    margin-top: 10px;
+}
+
+//footer
+
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #000;
+}
+
+.footer .license {
+    color: #fff;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .banner .content-banner h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 992px) {
+    .css-container {
+        // padding: 0 !important;
+        // margin: 0 !important;
+        align-items: center;
+    }
+
+    .ml {
+        margin-left: 0;
+    }
+
+    .banner .avatar img {
+        width: 90%;
+        height: 350px;
+    }
+
+    .list-product {
+        display: grid !important;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+        justify-content: center;
+    }
+
+    .contact-card .card {
+        width: 40%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        grid-template-columns: 1fr;
+    }
+
+    .banner .avatar {
+        margin: 0 15%;
+        grid-row-start: 1;
+        margin-bottom: 40px;
+        max-width: 70%;
+    }
+
+    .banner .avatar img {
+        box-shadow: 5px 5px 5px gray;
+    }
+
+    .list-product {
+        grid-template-columns: auto;
+        padding: 0;
+    }
+
+    .contact-card .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .banner .content-banner h1 {
+        font-size: 1.5em;
+    }
 }

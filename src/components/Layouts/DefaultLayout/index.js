@@ -1,12 +1,14 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function DefaultLayout({ children }) {
     return (
         <div>
             <Header />
             <div>
-                <div className="content container">{children}</div>
+                <div className="content">{children}</div>
             </div>
+            <Footer />
         </div>
     );
 }

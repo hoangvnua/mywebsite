@@ -20,19 +20,17 @@ function Header() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto ml">
                         <Nav.Link className="menus" href="/">
-                            Home
+                            TRANG CHỦ
                         </Nav.Link>
-                        <Nav.Link className="menus" href="/">
-                            Project
+                        <Nav.Link className="menus" href="/shop">
+                            MINI SHOP
                         </Nav.Link>
-                        <Nav.Link className="menus" href="/">
-                            Mini Shop
+
+                        <Nav.Link className="menus" href="/blog">
+                            BLOG
                         </Nav.Link>
-                        <Nav.Link className="menus" href="/">
-                            Blog
-                        </Nav.Link>
-                        <Nav.Link className="menus" href="/">
-                            Contact
+                        <Nav.Link className="menus" href="/contact">
+                            LIÊN HỆ
                         </Nav.Link>
                     </Nav>
                     <Nav>
